@@ -3,6 +3,7 @@ import words from "./wordsList.json";
 import './App.css'
 import { HangmanDrawing } from './HangmanDrawing';
 import { HangmanWord } from './HangmanWord';
+import { Keyboard } from './Keyboard';
 
 function App() {
   const [wordToGuess, setWordToGuess] = useState<String>(
@@ -24,9 +25,10 @@ function App() {
         {wordToGuess}
         <HangmanDrawing />
         <HangmanWord />
-
-        
-       
+        <div style={{alignSelf: "stretch"}}>
+            <Keyboard />    
+        </div>
+           
     </div>
   )
 }
